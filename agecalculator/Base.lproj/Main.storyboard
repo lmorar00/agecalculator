@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="agecalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJe-AO-ahj">
+                                <rect key="frame" x="178" y="60" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tP0-8J-ksR">
+                                <rect key="frame" x="16" y="97" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U74-bd-Kiw">
+                                <rect key="frame" x="107" y="147" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Rkd-n9-jOL"/>
+                                    <constraint firstAttribute="height" constant="50" id="f8a-8p-Gzy"/>
+                                </constraints>
+                                <state key="normal" title="Calculate Age"/>
+                                <connections>
+                                    <action selector="calculateAgeBtnAxn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WXv-lg-ddf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tP0-8J-ksR" firstAttribute="top" secondItem="XJe-AO-ahj" secondAttribute="bottom" constant="16" id="80r-ZV-3ep"/>
+                            <constraint firstItem="XJe-AO-ahj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CWe-wu-scO"/>
+                            <constraint firstItem="U74-bd-Kiw" firstAttribute="top" secondItem="tP0-8J-ksR" secondAttribute="bottom" constant="16" id="Nl8-z6-WQ8"/>
+                            <constraint firstItem="tP0-8J-ksR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Tse-AQ-vk9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tP0-8J-ksR" secondAttribute="trailing" constant="16" id="cyV-Up-fDI"/>
+                            <constraint firstItem="XJe-AO-ahj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="hct-oE-528"/>
+                            <constraint firstItem="U74-bd-Kiw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i09-PN-JP8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ageLabel" destination="XJe-AO-ahj" id="y8h-42-lfw"/>
+                        <outlet property="dobTextField" destination="tP0-8J-ksR" id="eGW-1V-Pbl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
